@@ -22,10 +22,13 @@ export default {
     }
   },
   actions: {
-    async SetNameAsync(context) {
-      const random = await fetchNameMock()
-      context.commit('SET_NAME', random)
-      return random
+    SetNameAsync(context) {
+      return new Promise(resolve => {
+        fetchNameMock().then(random => {
+          context.commit('SET_NAME', random)
+          resolve(random)
+        })
+      })
     }
   },
   getters: {
