@@ -1,21 +1,19 @@
 <template>
   <section class="container">
-    <h2>scoped slot component</h2>
-    <slot :user="user"></slot>
+    <div>
+      <h3>v-model use vuex</h3>
+      <!-- <input type="text" v-model=""> -->
+    </div>
   </section>
 </template>
 <script>
 export default {
-  name: 'ScopedSlot',
+  name: 'Index',
   components: {},
   mixins: [],
   props: {},
   data() {
-    return {
-      user: {
-        data: '父级作用域的数据'
-      }
-    };
+    return {};
   },
   computed: {},
   watch: {},
@@ -23,7 +21,7 @@ export default {
   methods: {}
 };
 </script>
-<style lang="css" scoped>
+<style scoped>
 .container {
   height: 100%;
 }

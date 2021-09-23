@@ -35,6 +35,6 @@ export default {
 </script>
 <style lang="css" scoped>
 .container {
-  
+  height: 100%;
 }
 </style>
