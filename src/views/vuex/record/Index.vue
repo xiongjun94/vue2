@@ -21,7 +21,7 @@ export default {
   methods: {}
 };
 </script>
-<style scoped>
+<style lang="scss" scoped>
 .container {
   height: 100%;
 }

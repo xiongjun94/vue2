@@ -1,10 +1,17 @@
 <template>
-  <section class="container"></section>
+  <div class="app-wrapper">
+    <sidebar></sidebar>
+    <div></div>
+  </div>
 </template>
 <script>
+import { Sidebar } from './components'
+
 export default {
   name: 'Index',
-  components: {},
+  components: {
+    Sidebar
+  },
   mixins: [],
   props: {},
   data() {
@@ -16,11 +23,10 @@ export default {
   methods: {}
 };
 </script>
-<style scoped>
+<style lang="scss" scoped>
 .container {
   height: 100%;
 }
-
 .fade-enter-active,
 .fade-leave-active {
   transition: opacity 0.5s;

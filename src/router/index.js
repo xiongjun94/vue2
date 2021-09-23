@@ -3,6 +3,8 @@ import VueRouter from 'vue-router'
 
 Vue.use(VueRouter)
 
+import TheLayout from '@/components/TheLayout' 
+
 const router = new VueRouter({
 
   // 以下为默认值 
@@ -14,7 +16,10 @@ const router = new VueRouter({
   routes: [
     {
       path: '/',
-      redirect: '/vuex'
+      component: TheLayout,
+      hidden: true,
+      children: [
+      ]
     },
     {
       path: '/vuex',
@@ -24,7 +29,7 @@ const router = new VueRouter({
         {
           path: 'example',
           name: 'vuexExample',
-          component: () => import('@/views/vuex/Api'),
+          component: () => import('@/views/vuex/Example'),
         },
         {
           path: 'record',

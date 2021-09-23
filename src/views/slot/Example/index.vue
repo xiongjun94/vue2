@@ -24,9 +24,10 @@
   </section>
 </template>
 <script>
-import DefaultSlot from './DefualtSlot';
-import NamedSlot from './Example/NamedSlot.vue';
-import ScopedSlot from './Example/ScopedSlot.vue';
+import DefaultSlot from './DefualtSlot'
+import NamedSlot from './NamedSlot'
+import ScopedSlot from './ScopedSlot'
+
 export default {
   name: 'Index',
   components: {
@@ -45,7 +46,7 @@ export default {
   methods: {}
 };
 </script>
-<style lang="css" scoped>
+<style lang="scss" scoped>
 .container-box {
   display: flex;
 }

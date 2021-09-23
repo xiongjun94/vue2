@@ -1,19 +1,16 @@
 <template>
   <div id="app">
-    <the-layout></the-layout>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import TheLayout from '@/components/TheLayout/Index'
-
 export default {
-  name: 'App',
-  components: { TheLayout }
-};
+  name: 'App'
+}
 </script>
 
-<style>
+<style lang="scss">
 * {
   margin: 0;
   padding: 0;
