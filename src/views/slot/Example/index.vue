@@ -29,7 +29,7 @@ import NamedSlot from './NamedSlot'
 import ScopedSlot from './ScopedSlot'
 
 export default {
-  name: 'Index',
+  name: 'Example',
   components: {
     DefaultSlot,
     NamedSlot,

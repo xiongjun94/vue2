@@ -8,7 +8,7 @@
 import { Sidebar } from './components'
 
 export default {
-  name: 'Index',
+  name: 'TheLayout',
   components: {
     Sidebar
   },

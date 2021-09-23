@@ -1,19 +1,13 @@
 <template>
   <section class="container">
-    <el-scrollbar>
-      <el-menu>
-        <sidebar-item></sidebar-item>
-      </el-menu>
-    </el-scrollbar>
+    
   </section>
 </template>
 <script>
-import SidebarItem from './SidebarItem.vue'
-
 export default {
-  name: 'Sidebar',
+  name: 'SidebarItem',
   components: {
-    SidebarItem
+    
   },
   mixins: [],
   props: {

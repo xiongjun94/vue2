@@ -8,7 +8,7 @@
 </template>
 <script>
 export default {
-  name: 'Index',
+  name: 'Record',
   components: {},
   mixins: [],
   props: {},

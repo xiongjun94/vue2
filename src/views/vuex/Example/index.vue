@@ -23,7 +23,7 @@ import store from '@/store'; // 等价于this.$store
 import { mapState, mapMutations, mapActions, mapGetters } from 'vuex'; // 辅助函数
 
 export default {
-  name: 'index',
+  name: 'Example',
   computed: {
     ...mapState(['globalName']),
     // globalName() {
