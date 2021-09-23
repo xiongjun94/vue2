@@ -25,8 +25,8 @@
 </template>
 <script>
 import DefaultSlot from './DefualtSlot';
-import NamedSlot from './NamedSlot.vue';
-import ScopedSlot from './ScopedSlot.vue';
+import NamedSlot from './Example/NamedSlot.vue';
+import ScopedSlot from './Example/ScopedSlot.vue';
 export default {
   name: 'Index',
   components: {

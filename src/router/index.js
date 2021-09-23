@@ -4,11 +4,13 @@ import VueRouter from 'vue-router'
 Vue.use(VueRouter)
 
 const router = new VueRouter({
+
+  // 以下为默认值 
   mode: 'hash', // history
   base: '/', // 应用的基路径
   linkActiveClass: 'router-link-active', // router-link 激活的class
   linkExactActiveClass: 'router-link-exact-active', // router-link 精确激活的class
-  // 以上为默认值
+
   routes: [
     {
       path: '/',
@@ -17,26 +19,35 @@ const router = new VueRouter({
     {
       path: '/vuex',
       name: 'vuex',
-      redirect: '/vuex/api',
+      redirect: '/vuex/example',
       children: [
         {
-          path: 'api',
-          name: 'api',
-          component: () => import('@/views/vuex/api/Index.vue'),
+          path: 'example',
+          name: 'vuexExample',
+          component: () => import('@/views/vuex/Api'),
         },
         {
           path: 'record',
-          name: 'record',
-          component: () => import('@/views/vuex/record/Index.vue'),
+          name: 'vuexRecord',
+          component: () => import('@/views/vuex/Record'),
         }
       ]
     },
     {
       path: '/slot',
       name: 'slot',
-      component: () => import('@/views/slot/Index.vue')
+      redirect: '/slot/example',
+      children: [
+        {
+          path: 'example',
+          name: 'slotExample',
+          component: () => import('@/views/slot/Example')
+        }
+      ]
     }
   ],
+
+  // 设置路由出口的滚动条行为
   scrollBehavior(to, from, savedPosition) {
     console.log(document.body.scrollTop)
     if (savedPosition) {
