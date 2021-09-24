@@ -1,8 +1,8 @@
 <template>
   <div class="app-wrapper">
-    <sidebar class="sidebar-container"></sidebar>
+    <sidebar class="sidebar-container" />
     <div class="main-container">
-      <app-main></app-main>
+      <app-main />
     </div>
   </div>
 </template>
@@ -18,13 +18,13 @@ export default {
   mixins: [],
   props: {},
   data() {
-    return {};
+    return {}
   },
   computed: {},
   watch: {},
   mounted() {},
   methods: {}
-};
+}
 </script>
 <style lang="scss" scoped>
 

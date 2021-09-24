@@ -14,14 +14,14 @@ export default {
   computed: {
     message: {
       get() {
-        return this.$store.state.test.message;
+        return this.$store.state.test.message
       },
       set(val) {
-        this.$store.commit('test/SET_MESSAGE', val);
+        this.$store.commit('test/SET_MESSAGE', val)
       }
     }
   }
-};
+}
 </script>
 <style lang="scss" scoped>
 .container {
