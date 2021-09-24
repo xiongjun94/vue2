@@ -1,7 +1,7 @@
 function fetchNameMock() {
   return new Promise(resolve => {
     setTimeout(() => {
-      resolve('随机数：' + Math.random().toFixed(2))
+      resolve('random number:' + Math.random().toFixed(2))
     }, 1000)
   })
 }

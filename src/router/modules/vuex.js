@@ -1,4 +1,4 @@
-import TheLayout from '@/components/TheLayout'
+import TheLayout from '@/components/theLayout'
 
 export default {
   path: '/vuex',
@@ -14,17 +14,17 @@ export default {
       path: 'example',
       name: 'vuexExample',
       meta: {
-        title: 'vuexExample'
+        title: 'example'
       },
-      component: () => import('@/views/vuex/Example'),
+      component: () => import('@/views/vuex/example'),
     },
     {
       path: 'record',
       name: 'vuexRecord',
       meta: {
-        title: 'vuexRecord'
+        title: 'record'
       },
-      component: () => import('@/views/vuex/Record'),
+      component: () => import('@/views/vuex/record'),
     }
   ]
 }

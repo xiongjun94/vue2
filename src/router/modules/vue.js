@@ -1,9 +1,8 @@
-import TheLayout from '@/components/TheLayout'
+import TheLayout from '@/components/theLayout'
 
 export default {
   path: '/vue',
   name: 'vue',
-  redirect: '/vue/example',
   component: TheLayout,
   alwaysShow: true,
   meta: {
@@ -11,12 +10,37 @@ export default {
   },
   children: [
     {
-      path: 'example',
-      name: 'slotExample',
+      path: 'slot',
+      name: 'vueSlot',
+      component: () => import('@/views/vue/slot'),
+      // alwaysShow: true,
       meta: {
-        title: 'slotExample'
+        title: 'slot'
       },
-      component: () => import('@/views/vue/slot/Example')
+      children: [
+        {
+          path: 'example',
+          name: 'slotExample',
+          meta: {
+            title: 'example'
+          },
+          component: () => import('@/views/vue/slot/example')
+        },
+        {
+          path: 'record',
+          name: 'slotRecord',
+          meta: {
+            title: 'record'
+          }
+        }
+      ]
+    },
+    {
+      path: 'transferParams',
+      name: 'vueTransferParams',
+      meta: {
+        title: 'transferParams'
+      }
     }
   ]
 }

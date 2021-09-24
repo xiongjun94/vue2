@@ -1,4 +1,4 @@
-import TheLayout from '@/components/TheLayout'
+import TheLayout from '@/components/theLayout'
 
 export default {
   path: '/router',
@@ -12,19 +12,19 @@ export default {
   children: [
     {
       path: 'dynamicRouter/:name',
-      name: 'dynamicRouter',
-      component: () => import('@/views/router/DynamicRouter'),
+      name: 'routerDynamicRouter',
+      component: () => import('@/views/router/dynamicRouter'),
       meta: {
         title: 'dynamicRouter'
       }
     },
     {
       path: 'details/:type',
-      name: 'dynamicRouterDetails',
+      name: 'routerDynamicRouterDetails',
       meta: {
         title: 'dynamicRouterDetails'
       },
-      component: () => import('@/views/router/DynamicRouter/Details')
+      component: () => import('@/views/router/dynamicRouter/details')
     },
     {
       path: 'transferParams',
@@ -32,7 +32,7 @@ export default {
       meta: {
         title: 'transferParams'
       },
-      component: () => import('@/views/router/TransferParams')
+      component: () => import('@/views/router/transferParams')
     }
   ]
 }
