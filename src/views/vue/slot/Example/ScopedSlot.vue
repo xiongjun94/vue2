@@ -1,7 +1,7 @@
 <template>
   <section class="container">
     <h2>scoped slot component</h2>
-    <slot :user="user"></slot>
+    <slot :user="user" />
   </section>
 </template>
 <script>
@@ -15,13 +15,13 @@ export default {
       user: {
         data: '父级作用域的数据'
       }
-    };
+    }
   },
   computed: {},
   watch: {},
   mounted() {},
   methods: {}
-};
+}
 </script>
 <style lang="scss" scoped>
 .container {

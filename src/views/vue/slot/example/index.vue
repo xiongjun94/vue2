@@ -38,13 +38,13 @@ export default {
   mixins: [],
   props: {},
   data() {
-    return {};
+    return {}
   },
   computed: {},
   watch: {},
   mounted() {},
   methods: {}
-};
+}
 </script>
 <style lang="scss" scoped>
 .container-box {

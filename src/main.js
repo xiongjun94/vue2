@@ -3,6 +3,9 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 
+// CSS reset
+import 'normalize.css/normalize.css'
+
 // 鉴权
 import './router/permission'
 

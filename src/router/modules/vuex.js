@@ -16,7 +16,7 @@ export default {
       meta: {
         title: 'example'
       },
-      component: () => import('@/views/vuex/example'),
+      component: () => import('@/views/vuex/example')
     },
     {
       path: 'record',
@@ -24,7 +24,7 @@ export default {
       meta: {
         title: 'record'
       },
-      component: () => import('@/views/vuex/record'),
+      component: () => import('@/views/vuex/record')
     }
   ]
 }

@@ -1,13 +1,13 @@
 <template>
-  <el-menu 
-   mode="vertical"
-   >
+  <el-menu
+    mode="vertical"
+  >
     <sidebar-item v-for="route in routes" :key="route.path" :item="route" :base-path="route.path" />
   </el-menu>
 </template>
 <script>
-import SidebarItem from './SidebarItem.vue';
-import { mapState } from 'vuex';
+import SidebarItem from './SidebarItem.vue'
+import { mapState } from 'vuex'
 
 export default {
   name: 'Sidebar',
@@ -17,7 +17,7 @@ export default {
   mixins: [],
   props: {},
   data() {
-    return {};
+    return {}
   },
   computed: {
     ...mapState('permission', ['routes'])
@@ -26,7 +26,7 @@ export default {
   mounted() {
   },
   methods: {}
-};
+}
 </script>
 <style lang="scss" scoped>
 .container {

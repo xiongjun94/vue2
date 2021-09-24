@@ -2,7 +2,6 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 Vue.use(VueRouter)
 
-
 import modulesRouter from './modules/router'
 import modulesVuex from './modules/vuex'
 import modulesVue from './modules/vue'
@@ -20,10 +19,9 @@ export const routes = [
   modulesVue
 ]
 
-
 const createRouter = () => new VueRouter({
 
-  // 以下为默认值 
+  // 以下为默认值
   mode: 'hash', // history
   base: '/', // 应用的基路径
   linkActiveClass: 'router-link-active', // router-link 激活的class

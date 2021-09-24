@@ -10,15 +10,15 @@
 export default {
   name: 'DynamicRouter',
   components: {
-    
+
   },
   mixins: [],
   props: {
-    
+
   },
   data() {
     return {
-      
+
     }
   },
   computed: {
@@ -28,18 +28,18 @@ export default {
     }
   },
   watch: {
-    
+
   },
   mounted() {
-    
+
   },
   methods: {
-    
+
   }
 }
 </script>
 <style lang="scss" scoped>
 .container {
-  
+
 }
 </style>

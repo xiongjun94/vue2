@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-
 Vue.use(Vuex)
 
 const modulesFiles = require.context('./modules', true, /\.js$/)
@@ -21,7 +20,7 @@ function fetchGlobalNameMock() {
 
 const store = new Vuex.Store({
   state: {
-    globalName: '全局属性'
+    globalName: 'global attribute'
   },
   mutations: {
     SET_GLOBAL_NAME(state, globalName) {
