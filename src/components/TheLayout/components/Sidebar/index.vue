@@ -1,14 +1,13 @@
 <template>
-  <section class="container">
-    <el-scrollbar>
-      <el-menu>
-        <sidebar-item></sidebar-item>
-      </el-menu>
-    </el-scrollbar>
-  </section>
+  <el-menu 
+   mode="vertical"
+   >
+    <sidebar-item v-for="route in routes" :key="route.path" :item="route" :base-path="route.path" />
+  </el-menu>
 </template>
 <script>
-import SidebarItem from './SidebarItem.vue'
+import SidebarItem from './SidebarItem.vue';
+import { mapState } from 'vuex';
 
 export default {
   name: 'Sidebar',
@@ -16,30 +15,20 @@ export default {
     SidebarItem
   },
   mixins: [],
-  props: {
-    
-  },
+  props: {},
   data() {
-    return {
-      
-    }
+    return {};
   },
   computed: {
-    
+    ...mapState('permission', ['routes'])
   },
-  watch: {
-    
-  },
+  watch: {},
   mounted() {
-    
   },
-  methods: {
-    
-  }
-}
+  methods: {}
+};
 </script>
 <style lang="scss" scoped>
 .container {
-  
 }
 </style>

@@ -1,16 +1,19 @@
 <template>
   <div class="app-wrapper">
-    <sidebar></sidebar>
-    <div></div>
+    <sidebar class="sidebar-container"></sidebar>
+    <div class="main-container">
+      <app-main></app-main>
+    </div>
   </div>
 </template>
 <script>
-import { Sidebar } from './components'
+import { Sidebar, AppMain } from './components'
 
 export default {
   name: 'TheLayout',
   components: {
-    Sidebar
+    Sidebar,
+    AppMain
   },
   mixins: [],
   props: {},
@@ -24,15 +27,18 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-.container {
+
+$sidebarWidth: 250px;
+
+.app-wrapper {
+  width: 100%;
   height: 100%;
-}
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.5s;
-}
-.fade-enter,
-.fade-leave-to {
-  opacity: 0;
+  display: flex;
+  .sidebar-container {
+    width: $sidebarWidth;
+  }
+  .main-container {
+    width: calc(100% - #{$sidebarWidth});
+  }
 }
 </style>

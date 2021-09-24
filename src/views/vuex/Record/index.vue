@@ -2,7 +2,7 @@
   <section class="container">
     <div>
       <h3>v-model use vuex</h3>
-      <!-- <input type="text" v-model=""> -->
+      <el-input />
     </div>
   </section>
 </template>

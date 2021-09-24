@@ -1,9 +1,9 @@
 <template>
   <section class="app-main">
     <transition name="fade-transform" mode="out-in">
-      <keep-alive :include="cachedViews">
+      <!-- <keep-alive :include="cachedViews"> -->
         <router-view :key="key" />
-      </keep-alive>
+      <!-- </keep-alive> -->
     </transition>
   </section>
 </template>
@@ -21,3 +21,10 @@ export default {
   }
 };
 </script>
+
+<style lang="scss" scoped>
+.app-main {
+  width: 100%;
+  height: 100%;
+}
+</style>
