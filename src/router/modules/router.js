@@ -16,15 +16,18 @@ export default {
       component: () => import('@/views/router/dynamicRouter'),
       meta: {
         title: 'dynamicRouter'
-      }
-    },
-    {
-      path: 'details/:type',
-      name: 'routerDynamicRouterDetails',
-      meta: {
-        title: 'dynamicRouterDetails'
       },
-      component: () => import('@/views/router/dynamicRouter/details')
+      children: [
+        {
+          path: 'details/:type',
+          name: 'routerDynamicRouterDetails',
+          meta: {
+            title: 'dynamicRouterDetails'
+          },
+          hidden: true,
+          component: () => import('@/views/router/dynamicRouter/details')
+        }
+      ]
     },
     {
       path: 'transferParams',

@@ -1,8 +1,8 @@
 <template>
   <section class="container">
     <div>
-      <h3>route.parmas</h3>
-      <span>{{ parmas }}</span>
+      <p>name: {{ this.$route.params.name }}</p>
+      <p>type: {{ this.$route.params.type }}</p>
     </div>
   </section>
 </template>
@@ -21,11 +21,7 @@ export default {
 
     }
   },
-  computed: {
-    params() {
-      return this.$route.params || ''
-    }
-  },
+  computed: {},
   watch: {
 
   },

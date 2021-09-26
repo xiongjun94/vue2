@@ -1,28 +1,27 @@
 <template>
   <section class="container">
     <div>
-      <h3>动态路由参数</h3>
-      <span>{{ testData }}</span>
+      <h3>dynamic router params</h3>
+      <p>name: {{ params }}</p>
+      <el-button @click="goBack">go back</el-button>
+    </div>
+    <div>
+      <h3>children router params</h3>
+      <el-button @click="skipToChilren">skip to children route</el-button>
+      <router-view />
     </div>
   </section>
 </template>
 <script>
 export default {
   name: 'DynamicRouter',
-  components: {
-
-  },
-  mixins: [],
-  props: {
-
-  },
   data() {
     return {
-
+      childrenRouterParams: 'test'
     }
   },
   computed: {
-    testData() {
+    params() {
       const { name } = this.$route.params || ''
       return name
     }
@@ -34,12 +33,20 @@ export default {
 
   },
   methods: {
-
+    skipToChilren() {
+      this.$router.push({
+        path: `/router/dynamicRouter/${this.params}/details/${Math.random()}`
+      })
+    },
+    goBack() {
+      this.$router.push({
+        path: `/router/dynamicRouter/${Math.random()}`
+      })
+    }
   }
 }
 </script>
 <style lang="scss" scoped>
 .container {
-  width: 100%;
 }
 </style>

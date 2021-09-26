@@ -31,7 +31,6 @@ const createRouter = () => new VueRouter({
 
   // 滚动行为
   scrollBehavior(to, from, savedPosition) {
-    console.log(document.body.scrollTop)
     if (savedPosition) {
       return savedPosition
     } else {
