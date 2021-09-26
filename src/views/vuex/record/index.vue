@@ -1,10 +1,15 @@
 <template>
   <section class="container">
     <div>
-      <h3>v-model use vuex</h3>
-      <p>
-        <el-input v-model="message" />
-      </p>
+      <h3>(1) v-model use vuex state</h3>
+      <el-row type="flex" align="middle">
+        <el-col span="2">
+          <span>message:</span>
+        </el-col>
+        <el-col span="4">
+          <el-input v-model="message" />
+        </el-col>
+      </el-row>
     </div>
   </section>
 </template>
@@ -25,6 +30,9 @@ export default {
 </script>
 <style lang="scss" scoped>
 .container {
+  width: 100%;
   height: 100%;
+  box-sizing: border-box;
+  padding: 20px;
 }
 </style>

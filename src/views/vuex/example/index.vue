@@ -49,6 +49,7 @@ export default {
     },
 
     ...mapActions('test', ['SetNameAsync']),
+
     setNameAsync() {
       this.SetNameAsync().then(res => {
         console.log(res)
@@ -72,14 +73,10 @@ export default {
 </script>
 <style lang="scss" scoped>
 .container {
-  display: flex;
-  & > div {
-    width: 320px;
-    background: lightblue;
-    margin-right: 20px;
-  }
+  box-sizing: border-box;
+  padding: 20px;
   p {
-    margin: 10px 0;
+    margin: 20px 0;
   }
 }
 </style>
