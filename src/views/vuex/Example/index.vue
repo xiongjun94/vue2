@@ -74,7 +74,7 @@ export default {
 .container {
   display: flex;
   & > div {
-    width: 300px;
+    width: 320px;
     background: lightblue;
     margin-right: 20px;
   }
