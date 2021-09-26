@@ -27,10 +27,16 @@ export default {
     }
   },
   watch: {
-
+    '$route.params'(v) {
+      console.log(v)
+    }
   },
   mounted() {
 
+  },
+  beforeRouteUpdate(to, form, next) {
+    console.log(to, form)
+    next()
   },
   methods: {
     skipToChilren() {

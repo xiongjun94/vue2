@@ -16,7 +16,10 @@ export const routes = [
   // 路由过多时分模块引入
   modulesVuex,
   modulesRouter,
-  modulesVue
+  modulesVue,
+
+  // 404页面必须放到最后
+  { path: '*', redirect: '/404', hidden: true }
 ]
 
 const createRouter = () => new VueRouter({

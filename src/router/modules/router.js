@@ -30,6 +30,28 @@ export default {
       ]
     },
     {
+      path: 'namedView',
+      name: 'routerNamedView',
+      redirect: 'namedView/children',
+      component: () => import('@/views/router/namedView'),
+      meta: {
+        title: 'namedView'
+      },
+      children: [
+        {
+          path: 'children',
+          name: 'namedViewChildren',
+          hidden: true,
+          // 使用命名视图时key为components
+          components: {
+            viewA: () => import('@/views/router/namedView/ViewA'),
+            viewB: () => import('@/views/router/namedView/ViewB'),
+            viewC: () => import('@/views/router/namedView/ViewC')
+          }
+        }
+      ]
+    },
+    {
       path: 'transferParams',
       name: 'transferParams',
       meta: {
