@@ -73,8 +73,6 @@ export default {
 </script>
 <style lang="scss" scoped>
 .container {
-  box-sizing: border-box;
-  padding: 20px;
   p {
     margin: 20px 0;
   }

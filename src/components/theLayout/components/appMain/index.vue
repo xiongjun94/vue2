@@ -2,7 +2,7 @@
   <section class="app-main">
     <transition name="fade-transform" mode="out-in">
       <!-- <keep-alive :include="cachedViews"> -->
-      <router-view :key="key" />
+      <router-view :key="key" class="second-router-view" />
       <!-- </keep-alive> -->
     </transition>
   </section>
@@ -26,5 +26,11 @@ export default {
 .app-main {
   width: 100%;
   height: 100%;
+  .second-router-view {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+  }
 }
 </style>
